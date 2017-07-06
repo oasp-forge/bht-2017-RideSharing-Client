@@ -1,7 +1,7 @@
-= Sample Application image:https://travis-ci.org/oasp/oasp4js.svg?branch=development["Build Status",link="https://travis-ci.org/oasp/oasp4js"] image:https://coveralls.io/repos/oasp/oasp4js/badge.svg?branch=development["Coverage Status",link="https://coveralls.io/r/oasp/oasp4js?branch=development"]
+# Sample Application image:https://travis-ci.org/oasp/oasp4js.svg?branch=development["Build Status",link="https://travis-ci.org/oasp/oasp4js"] image:https://coveralls.io/repos/oasp/oasp4js/badge.svg?branch=development["Coverage Status",link="https://coveralls.io/r/oasp/oasp4js?branch=development"]
 The sample application is built on top of the https://github.com/oasp/oasp4js-app-template[application template] and is an AngularJS application. Some of the AngularJS modules (e.g. oasp-security, oasp-i18n, etc.) which can be reused in your application are available in https://github.com/oasp/oasp4js-bower[this repository] either directly or using the Bower package manager. The sample application needs the https://github.com/oasp/oasp4j[oasp4j] (Java) server part to be installed.
 
-== Getting Started
+## Getting Started
 
 To get started you need to clone both the `oasp4j` and `oasp4js` repositories containing the server and the client part respectively. Each of them is to be built and started to talk to each other it. There are two ways to get the sample application working: eithter by getting the https://github.com/oasp/oasp4j/wiki/oasp-ide-setup[oasp IDE] and running it from there or setting up the IDE manually. 
 
@@ -33,9 +33,9 @@ We asume you are back in the `<oasp_dir>` directory.
 
 Clone the oasp4js repository:
 
-....
+´´´´
 git clone https://github.com/oasp-forge/bht-2017-RideSharing-Client.git -b master 
-....
+´´´´
 
 Install the client part's dependencies: 
 
