@@ -1,0 +1,130 @@
+/*
+LNDW-Videomap CSS-styles.
+*/
+/*
+Created on : 28.12.2016, 14:39:10
+Author     : Ala Naoufal
+*/
+
+html, body {
+    background: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+}
+.form-control{
+    border-radius:5px;
+}
+@media (min-width:1024px){
+    .banner786{
+        display:none;
+    }
+    .banner{
+    background-image: url('../img/banner3.png');
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    height:55vh;
+    }
+    .signin_msg{
+      text-align: center;
+      color:#fff;
+    }
+    .banner_logo{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .signin_field{
+      width: 75%;
+      margin: auto;
+    }
+    .signin_button{
+      display: block;
+      margin: auto;
+      width:50%;
+    }
+    .signin_items{
+      margin: 10% 33%;
+    }
+    .welcome_msg{
+      text-align: center;
+      color: #fff;
+    }
+
+}
+@media (max-width: 1023px){
+    .banner1024{
+        /*display:none;*/
+    }
+    .banner{
+        background-image: url('../img/banner3.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 55vh;
+    }
+    .signin_msg{
+      text-align: center;
+      color:#fff;
+    }
+    .banner_logo{
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .signin_field{
+      width: 75%;
+      margin: auto;
+    }
+    .signin_button{
+      display: block;
+      margin: auto;
+      width:50%;
+    }
+    .signin_items{
+      margin: 20% 0;
+    }
+    .welcome_msg{
+      text-align: center;
+      color: #fff;
+    }
+
+}
+
+/*---------------------------------- NAVBAR START --------------------------------------*/
+a{
+    text-decoration: none;
+    color:#fff;
+}
+a:hover{
+    color: #ffc006;
+    text-decoration: none;
+}
+
+.navbar{
+    border:0px;
+    transition:all 1s;
+    margin-bottom: 0;
+    background-color: rgba(0,0,0,0);
+}
+.navbar-toggle{
+    margin-top: 20px;
+    padding: 10px 10px;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+    background-color: #fff;
+    border-bottom: 3px solid #45B0D0;
+    color: #45B0D0;
+}
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover{
+    color:orange;
+}
+
+.navbar-nav>li>a{
+    line-height: 2;
+    font-size: 12px;
+}
+.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-brand:focus{
+  color: #45B0D0;
+}
+.navbar-inverse .navbar-nav > li > a{
+}
+/*---------------------------------- NAVBAR END --------------------------------------*/
