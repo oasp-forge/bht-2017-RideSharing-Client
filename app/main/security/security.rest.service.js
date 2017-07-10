@@ -9,6 +9,7 @@ angular.module('app.main').factory('securityRestService', function ($http, curre
     'use strict';
 
     var servicePath = currentContextPath.get() + 'services/rest/';
+    var securityPath = currentContextPath.get() + 'services/rest/';
 
     return {
         /**
@@ -19,7 +20,7 @@ angular.module('app.main').factory('securityRestService', function ($http, curre
          * @return {promise} http promise
          */
         getCurrentUser: function () {
-            return $http.get(servicePath + 'security/v1/currentuser/');
+            return $http.get(securityPath + 'security/v1/currentuser/');
         },
         /**
          * @ngdoc method
@@ -29,7 +30,7 @@ angular.module('app.main').factory('securityRestService', function ($http, curre
          * @return {promise} http promise
          */
         getCsrfToken: function () {
-            return $http.get(servicePath + 'security/v1/csrftoken/');
+            return $http.get(securityPath + 'security/v1/csrftoken/');
         },
         /**
          * @ngdoc method

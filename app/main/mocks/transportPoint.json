@@ -1,0 +1,79 @@
+[
+    {
+        "id": 1,
+        "modificationCounter": 1,
+        "revision": null,
+        "name": "Berlin Niederlassung",
+        "cgLocation": true,
+        "country": "City1",
+        "city": "Germany",
+        "locationAddress": "Potsdamer platz 10243 Berlin",
+        "gpsCoordination": "52.5457966,13.5066605"
+    },
+    {
+        "id": 2,
+        "modificationCounter": 1,
+        "revision": null,
+        "name": "Hannover Niederlassung",
+        "cgLocation": true,
+        "country": "City2",
+        "city": "Germany",
+        "locationAddress": "Potsdamer platz 10243 Berlin",
+        "gpsCoordination": "52.5457966,13.5066605"
+    },
+    {
+        "id": 3,
+        "modificationCounter": 1,
+        "revision": null,
+        "name": "Frankfurt Niederlassung",
+        "cgLocation": true,
+        "country": "City3",
+        "city": "Germany",
+        "locationAddress": "Potsdamer platz 10243 Berlin",
+        "gpsCoordination": "52.5457966,13.5066605"
+    },
+    {
+        "id": 4,
+        "modificationCounter": 1,
+        "revision": null,
+        "name": "Duesseldorf Niederlassung",
+        "cgLocation": true,
+        "country": "City4",
+        "city": "Germany",
+        "locationAddress": "Potsdamer platz 10243 Berlin",
+        "gpsCoordination": "52.5457966,13.5066605"
+    },
+    {
+        "id": 5,
+        "modificationCounter": 1,
+        "revision": null,
+        "name": "Stuttgart Niederlassung",
+        "cgLocation": true,
+        "country": "City5",
+        "city": "Germany",
+        "locationAddress": "Potsdamer platz 10243 Berlin",
+        "gpsCoordination": "52.5457966,13.5066605"
+    },
+    {
+        "id": 6,
+        "modificationCounter": 1,
+        "revision": null,
+        "name": "Muenchen Niederlassung",
+        "cgLocation": true,
+        "country": "City6",
+        "city": "Germany",
+        "locationAddress": "Potsdamer platz 10243 Berlin",
+        "gpsCoordination": "52.5457966,13.5066605"
+    },
+    {
+        "id": 7,
+        "modificationCounter": 1,
+        "revision": null,
+        "name": "Berlin Flughafen",
+        "cgLocation": false,
+        "country": "City6",
+        "city": "Germany",
+        "locationAddress": "Potsdamer platz 10243 Berlin",
+        "gpsCoordination": "52.5457966,13.5066605"
+    }
+]

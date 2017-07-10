@@ -1,0 +1,54 @@
+[
+    {
+        "id": 1,
+        "modificationCounter": 1,
+        "revision": null,
+        "userId": 103,
+        "fromLocation": 1,
+        "toLocation": 2,
+        "earliestDepartureTime": 1494453599000,
+        "latestDepartureTime": 1494453599000,
+        "numberOfPlaces": 2,
+        "luggageSpace": "medium",
+        "rsofferIdMapped": 1
+    },
+    {
+        "id": 2,
+        "modificationCounter": 1,
+        "revision": null,
+        "userId": 104,
+        "fromLocation": 3,
+        "toLocation": 6,
+        "earliestDepartureTime": 1494453599000,
+        "latestDepartureTime": 1494453599000,
+        "numberOfPlaces": 1,
+        "luggageSpace": "medium",
+        "rsofferIdMapped": 1
+    },
+    {
+        "id": 3,
+        "modificationCounter": 1,
+        "revision": null,
+        "userId": 103,
+        "fromLocation": 1,
+        "toLocation": 6,
+        "earliestDepartureTime": 1494453599000,
+        "latestDepartureTime": 1494453599000,
+        "numberOfPlaces": 1,
+        "luggageSpace": "medium",
+        "rsofferIdMapped": 1
+    },
+    {
+        "id": 4,
+        "modificationCounter": 1,
+        "revision": null,
+        "userId": 102,
+        "fromLocation": 2,
+        "toLocation": 6,
+        "earliestDepartureTime": 1494453599000,
+        "latestDepartureTime": 1494453599000,
+        "numberOfPlaces": 2,
+        "luggageSpace": "medium",
+        "rsofferIdMapped": 1
+    }
+]

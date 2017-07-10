@@ -1,0 +1,54 @@
+[
+    {
+        "id": 1,
+        "modificationCounter": 1,
+        "revision": null,
+        "userId": 101,
+        "fromLocation": 1,
+        "toLocation": 2,
+        "departureTime": 1494453599000,
+        "delay": 15,
+        "numberOfPlaces": 3,
+        "luggageSpace": "medium",
+        "status": true
+    },
+    {
+        "id": 2,
+        "modificationCounter": 1,
+        "revision": null,
+        "userId": 101,
+        "fromLocation": 3,
+        "toLocation": 4,
+        "departureTime": 1494453599000,
+        "delay": 10,
+        "numberOfPlaces": 1,
+        "luggageSpace": "small",
+        "status": true
+    },
+    {
+        "id": 3,
+        "modificationCounter": 1,
+        "revision": null,
+        "userId": 101,
+        "fromLocation": 5,
+        "toLocation": 6,
+        "departureTime": 1494453599000,
+        "delay": 5,
+        "numberOfPlaces": 2,
+        "luggageSpace": "large",
+        "status": true
+    },
+    {
+        "id": 4,
+        "modificationCounter": 1,
+        "revision": null,
+        "userId": 101,
+        "fromLocation": 1,
+        "toLocation": 6,
+        "departureTime": 1494453599000,
+        "delay": 20,
+        "numberOfPlaces": 4,
+        "luggageSpace": "small",
+        "status": true
+    }
+]

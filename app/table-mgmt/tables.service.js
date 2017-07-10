@@ -23,6 +23,26 @@ angular.module('app.table-mgmt').factory('tables', function (tableManagementRest
                 return paginatedTables;
             });
         },
+        getJson: function() {
+            return tableManagementRestService.getRsOffer().then(function(response) {
+                return response.data;
+            });
+        },
+        getUsers: function() {
+            return tableManagementRestService.getUsers().then(function(response) {
+                return response.data;
+            });
+        },
+        getRequest: function() {
+            return tableManagementRestService.getRequest().then(function(response) {
+                return response.data;
+            });
+        },
+        getTransportPoint: function() {
+            return tableManagementRestService.getTransportPoint().then(function(response) {
+                return response.data;
+            });
+        },
         /**
          * @ngdoc method
          * @name table-mgmt.tables#getTable

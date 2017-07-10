@@ -19,8 +19,20 @@ angular.module('app.table-mgmt').factory('tableManagementRestService', function 
          * @params {number} id
          * @return {HttpPromise} http promise
          */
-        getTable: function (id) {
-            return $http.get(servicePath + '/table/' + id);
+        getTable: function () {
+            return $http.get(servicePath + '/table');
+        },
+        getRsOffer: function () {
+            return $http.get('main/mocks/rsoffer.json');
+        },
+        getRequest: function () {
+            return $http.get('main/mocks/request.json');
+        },
+        getTransportPoint: function () {
+            return $http.get('main/mocks/transportPoint.json');
+        },
+        getUsers: function () {
+            return $http.get('main/mocks/users.json');
         },
         /**
          * @ngdoc method

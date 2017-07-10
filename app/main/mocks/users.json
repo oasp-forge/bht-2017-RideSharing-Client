@@ -1,0 +1,67 @@
+[
+    {
+        "id": 1,
+        "modificationCounter": 1,
+        "revision": null,
+        "name": "admin",
+        "emailAddress": "-",
+        "mobileNumber": "-",
+        "cgHomeLocation": "-",
+        "validationStatus": true,
+        "role": "admin",
+        "password": "adminpass",
+        "language": null
+    },
+    {
+        "id": 101,
+        "modificationCounter": 1,
+        "revision": null,
+        "name": "user1",
+        "emailAddress": "mo@mo.de",
+        "mobileNumber": "15315326266",
+        "cgHomeLocation": "Mortiz platz 10243 Berlin",
+        "validationStatus": true,
+        "role": "user",
+        "password": "password1",
+        "language": null
+    },
+    {
+        "id": 102,
+        "modificationCounter": 1,
+        "revision": null,
+        "name": "user2",
+        "emailAddress": "mo2@mo.de",
+        "mobileNumber": "15315326266",
+        "cgHomeLocation": "Mortiz platz 10243 Berlin",
+        "validationStatus": true,
+        "role": "user",
+        "password": "password2",
+        "language": null
+    },
+    {
+        "id": 103,
+        "modificationCounter": 1,
+        "revision": null,
+        "name": "user3",
+        "emailAddress": "mo3@mo.de",
+        "mobileNumber": "15315326266",
+        "cgHomeLocation": "Mortiz platz 10243 Berlin",
+        "validationStatus": true,
+        "role": "admin",
+        "password": "password3",
+        "language": null
+    },
+    {
+        "id": 104,
+        "modificationCounter": 1,
+        "revision": null,
+        "name": "user4",
+        "emailAddress": "mo4@mo.de",
+        "mobileNumber": "15315326266",
+        "cgHomeLocation": "Morits platz 10243 Berlin",
+        "validationStatus": true,
+        "role": "user",
+        "password": "password4",
+        "language": null
+    }
+]

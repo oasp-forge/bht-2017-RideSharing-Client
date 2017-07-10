@@ -28,8 +28,47 @@ angular.module('app.table-mgmt')
             });
         };
 
+        $scope.getOffers = function(id) {
+            return tables.getJson().then(function(jsonRequest) {
+                return jsonRequest;
+            }).then(function(res) {
+                $scope.fetchedOffers = res;
+            });
+        };
+
+        $scope.getRequest = function() {
+            return tables.getRequest().then(function(jsonRequest) {
+                return jsonRequest;
+            }).then(function(res) {
+                $scope.fetchedRequest = res;
+            });
+        };
+
+        $scope.getTransportPoint= function(id) {
+            var id = id;
+            return tables.getTransportPoint().then(function(jsonRequest) {
+                return jsonRequest;
+            }).then(function(res) {
+                for(var i = 0; i < res.length; i++) {
+                }
+                $scope.fetchedTransportPoint = res;
+            });
+        };
+
+        $scope.getUsers = function() {
+            return tables.getUsers().then(function(jsonRequest) {
+                return jsonRequest;
+            }).then(function(res) {
+                $scope.fetchedUsers = res;
+            });
+        };
+
         $scope.$watch('currentPage', function () {
             $scope.reloadTables();
+            $scope.getOffers();
+            $scope.getUsers();
+            $scope.getRequest();
+            $scope.getTransportPoint();
         });
 
         $scope.buttonDefs = [

@@ -53,6 +53,22 @@ angular.module('app.main', ['ui.router', 'oasp.oaspUi', 'oasp.oaspSecurity', 'ap
                 //url: '/notFound',
                 templateUrl: 'main/layout/page-not-found.html'
             })
+            .state('rsOffer', {
+                url: '/rsoffer',
+                templateUrl: 'main/mocks/rsoffer.json'
+            })
+            .state('request', {
+                url: '/request',
+                templateUrl: 'main/mocks/request.json'
+            })
+            .state('transportPoint', {
+                url: '/transportpoint',
+                templateUrl: 'main/mocks/transportPoint.json'
+            })
+            .state('users', {
+                url: '/users',
+                templateUrl: 'main/mocks/users.json'
+            })
             .state('dashboard', {
                 //do not define URL here
                 url: '/dashboard',

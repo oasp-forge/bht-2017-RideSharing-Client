@@ -3,27 +3,50 @@
 <body>
 <div class="row">
     <div class="col-md-12">
-        <!-- process:include table-mgmt/table-search/table-search-header.html --><!-- /process -->
-        <table class="raw-table" tr-ng-grid=""
-               selection-mode="SingleRow"
-               enable-filtering="false"
-               selected-items="selectedItems"
-               items="gridOptions.data">
+        <h1>Anzeige der Angebote</h1>
+        <table class="table">
             <thead>
             <tr>
-                <th field-name="number" display-name="Number" cell-width="7em"></th>
-                <th field-name="state" display-name="State"></th>
-                <th field-name="waiter" display-name="Waiter"></th>
+                <th>ID</th>
+                <th>UserID</th>
+                <th>From Location</th>
+                <th>To Location</th>
+                <th>Departure Time</th>
+                <th>Delay</th>
+                <th>Number of Spaces</th>
+                <th>Luggage Space</th>
+                <th>Status</th>
             </tr>
             </thead>
+            <tbody>
+                <tr ng-repeat="offer in fetchedOffers">
+                    <th>{{offer.id}}</th>
+                    <th>{{offer.userId}}</th>
+                    <th>{{offer.fromLocation}}</th>
+                    <th>{{offer.toLocation}}</th>
+                    <th>{{offer.departureTime}}</th>
+                    <th>{{offer.delay}}</th>
+                    <th>{{offer.numberOfPlaces}}</th>
+                    <th>{{offer.luggageSpace}}</th>
+                    <th>{{offer.status}}</th>
+                </tr>
+            </tbody>
         </table>
-
-        <button-bar is-label-translatable="true" button-defs="buttonDefs"></button-bar>
         <br>
         <br>
+        Users:
         <br>
-        <pagination total-items="totalItems" items-per-page="numPerPage" ng-model="currentPage" num-pages="numPages"
-                    class="pagination-sm" boundary-links="true" rotate="false" max-size="maxSize"></pagination>
+        {{fetchedUsers}}
+        <br>
+        <br>
+        Request:
+        <br>
+        {{fetchedRequest}}
+        <br>
+        <br>
+        Transport:
+        <br>
+        {{fetchedTransportPoint}}
     </div>
 </div>
 </body>
