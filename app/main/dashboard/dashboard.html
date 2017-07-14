@@ -1,2 +1,141 @@
-Hello World
-whazz up
+<!DOCTYPE html>
+<html>
+<link href="bootstrap.min.css" rel="stylesheet" />
+<script type="text/javascript" src="jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        $("#suchen").click(function() {
+            if ($("#basic-url").val().length > 0 && $("#basic2-url").val().length > 0) {
+                $("#offer1").css({
+                    'display': 'none'
+                });
+                $("#offer2").css({
+                    'display': 'none'
+                });
+                $("#book-success").css({
+                    'display': 'inherit'
+                });
+            }
+        });
+    });
+</script>
+
+<body>
+    <div class="navbar .navbar-inverse navbar-top" role="navigation" data-ng-controller="AppCntl">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" data-ng-init="navCollapsed = true" data-ng-click="navCollapsed = !navCollapsed">
+                  <span class="sr-only" translate>OASP.TOGGLE_NAV</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+                <a class="navbar-brand" href="#" translate>Capgemini Ridesharing</a>
+                <a class="navbar-brand" href="http://localhost:9000/#/table-mgmt/table-search">Fahrt suchen</a>
+                <a class="navbar-brand" href="http://localhost:9000/main/dashboard/dashboard.html">Fahrt anbieten</a>
+            </div>
+            <div class="collapse navbar-collapse" data-ng-class="{'in':!navCollapsed}">
+                <ul class="ng-cloak nav navbar-nav" data-ng-show="currentUser.isLoggedIn()">
+                    <li><a href="#table-mgmt/table-search" data-ng-show="currentUser.getUserName() === 'Ala  Waiter'" translate></a></li>
+                    <li><a href="#/sales-mgmt/cook-positions" data-ng-show="currentUser.getUserName() === 'Carl Cook' || currentUser.getUserName() === 'Charly Chief'" translate></a>
+                    </li>
+                </ul>
+                <div class="ng-cloak navbar-right" data-ng-show="currentUser.isLoggedIn()">
+                    <span class="navbar-text"><span translate="">Angemeldet als:</span>: Ala Naoufal<span></span></span>
+                    <button data-ng-click="logOff()" class="btn navbar-btn btn-sm btn-info" translate="">Abmelden
+                  </button>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <error-log></error-log>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <language-change></language-change>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" id="book-success" style="display:none;">
+              <div id="book-text" class="alert alert-success alert-dismissible" role="alert">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <strong>Vielen Dank!</strong> Dein Fahrtangbot wurde erfolgreich erstellt.
+                  <a href="http://localhost:9000/#/table-mgmt/table-search">Zur Suche</a>
+              </div>
+            </div>
+            <div class="col-md-6" id="offer1">
+                <h3>Fahrt anbieten</h3>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="basic-url">Von:</label>
+                        <input type="text" class="form-control" id="basic-url" placeholder="z.B. Berlin">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="basic-url">Nach:</label>
+                        <input type="text" class="form-control" id="basic2-url" placeholder="z.B. Mainz">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="basic-url">Datum:</label>
+                        <input id="date" type="date" class="form-control" value="2017-07-13">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="sel1">Uhrzeit:</label>:
+                        <input class="form-control" type="time" name="usr_time">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="sel1">Personen:</label>
+                        <select class="form-control" id="sel1">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                    </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="sel1">Gepäck:</label>
+                        <select class="form-control" id="sel1">
+                      <option>klein</option>
+                      <option>mittel</option>
+                      <option>groß</option>
+                    </select>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <button id="suchen" type="button" class="btn btn-success" aria-label="Left Align">Fahrt anbieten</button>
+                </div>
+            </div>
+            <div class="col-md-6" id="offer2">
+                <img id="search_banner" src="search_banner.png" width=100%>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>
+
+<!--<br>
+<br>
+Users:
+<br>
+{{fetchedUsers}}
+<br>
+<br>
+Request:
+<br>
+{{fetchedRequest}}
+<br>
+<br>
+Transport:
+<br>
+{{fetchedTransportPoint}}-->

@@ -13,7 +13,7 @@
     },
     "mainModule": "main",
     "proxy": {
-        "baseUrl": "http://localhost:8081",
+        "baseUrl": "http://localhost:8081/",
         "context": "/oasp4j-sample-server"
     }
 }

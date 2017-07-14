@@ -5,6 +5,7 @@ angular.module('app.main')
         function signInSuccessCallback() {
             appContext.getCurrentUser().then(function (currentUser) {
                 $location.url(currentUser.getHomeDialogPath());
+                console.log("controller signin");
                 //$location.url("dashboard");
             });
         }

@@ -1,53 +1,162 @@
 <!DOCTYPE html>
 <html>
+<script>
+    $(document).ready(function() {
+        $("#suchen").click(function() {
+            if ($("#basic-url").val().length > 0 && $("#basic2-url").val() == "Frankfurt") {
+                $("#search_banner").css({
+                    'display': 'none'
+                });
+                $("#result-text").css({
+                    'display': 'inherit'
+                });
+                $(".results").css({
+                    'display': 'inherit'
+                });
+                $("#result-text").html("Suchergebnisse:");
+            } else if ($("#basic-url").val().length > 0 && $("#basic2-url").val() !== "Frankfurt") {
+                $("#result-text").html("Zu deiner Suche von " + $("#basic-url").val() + " nach " + $("#basic2-url").val() + " gibt es leider keine Fahrten!");
+                $("#search_banner").css({
+                    'display': 'none'
+                });
+                $("#result-text").css({
+                    'display': 'inherit'
+                });
+                $(".results").css({
+                    'display': 'none'
+                });
+            }
+        });
+        $("#book1").click(function() {
+            $("#search_banner").css({
+                'display': 'none'
+            });
+            $("#result-text").css({
+                'display': 'none'
+            });
+            $(".results").css({
+                'display': 'none'
+            });
+            $("#result-text").html("Suchergebnisse:");
+            $("#book-text").css({
+                'display': 'inherit'
+            });
+        });
+        $("#book2").click(function() {
+            $("#search_banner").css({
+                'display': 'none'
+            });
+            $("#result-text").css({
+                'display': 'none'
+            });
+            $(".results").css({
+                'display': 'none'
+            });
+            $("#result-text").html("Suchergebnisse:");
+            $("#book-text").css({
+                'display': 'inherit'
+            });
+        });
+        $("#book3").click(function() {
+            $("#search_banner").css({
+                'display': 'none'
+            });
+            $("#result-text").css({
+                'display': 'none'
+            });
+            $(".results").css({
+                'display': 'none'
+            });
+            $("#result-text").html("Suchergebnisse:");
+            $("#book-text").css({
+                'display': 'inherit'
+            });
+        });
+    });
+</script>
+
 <body>
-<div class="row">
-    <div class="col-md-12">
-        <h1>Anzeige der Angebote</h1>
-        <table class="table">
-            <thead>
-            <tr>
-                <th>ID</th>
-                <th>UserID</th>
-                <th>From Location</th>
-                <th>To Location</th>
-                <th>Departure Time</th>
-                <th>Delay</th>
-                <th>Number of Spaces</th>
-                <th>Luggage Space</th>
-                <th>Status</th>
-            </tr>
-            </thead>
-            <tbody>
-                <tr ng-repeat="offer in fetchedOffers">
-                    <th>{{offer.id}}</th>
-                    <th>{{offer.userId}}</th>
-                    <th>{{offer.fromLocation}}</th>
-                    <th>{{offer.toLocation}}</th>
-                    <th>{{offer.departureTime}}</th>
-                    <th>{{offer.delay}}</th>
-                    <th>{{offer.numberOfPlaces}}</th>
-                    <th>{{offer.luggageSpace}}</th>
-                    <th>{{offer.status}}</th>
-                </tr>
-            </tbody>
-        </table>
-        <br>
-        <br>
-        Users:
-        <br>
-        {{fetchedUsers}}
-        <br>
-        <br>
-        Request:
-        <br>
-        {{fetchedRequest}}
-        <br>
-        <br>
-        Transport:
-        <br>
-        {{fetchedTransportPoint}}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 search-field">
+                <h3>Fahrtsuche</h3>
+                <div class="form-group">
+                    <label for="basic-url">Von:</label>
+                    <input type="text" class="form-control" id="basic-url" placeholder="z.B. Berlin">
+                </div>
+                <div class="form-group">
+                    <label for="basic-url">Nach:</label>
+                    <input type="text" class="form-control" id="basic2-url" placeholder="z.B. Mainz">
+                </div>
+                <div class="form-group">
+                    <label for="basic-url">Datum:</label>
+                    <input id="date" type="date" class="form-control" value="2017-07-13">
+                </div>
+                <div class="form-group">
+                    <label for="sel1">Personen:</label>
+                    <select class="form-control" id="sel1">
+                      <option>1</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="sel1">Gepäck:</label>
+                    <select class="form-control" id="sel1">
+                      <option>klein</option>
+                      <option>mittel</option>
+                      <option>groß</option>
+                    </select>
+                </div>
+                <button id="suchen" type="button" class="btn btn-success" aria-label="Left Align"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Fahrt finden</button>
+            </div>
+            <div class="col-md-9 result-field">
+                <img id="search_banner" src="main/img/search_banner.png" width=100%>
+                <div id="book-text" class="alert alert-success alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <strong>Vielen Dank!</strong> Deine Anfrage zur Mitfahrt wurde gesendet.
+                    <a href="javascript:window.location.reload();">Zurück zur Suche</a>
+                </div>
+                <h3 id="result-text">Suchergebnisse:</h3>
+                <div class="row results" <div ng-repeat="offer in fetchedOffers">
+                    <div class="col-xs-12 col-sm-3 profile">
+                        <img class="avatar" src="main/img/avatar-0{{offer.id}}.png" width=100>
+                        <h4>{{offer.userId}}</h4>
+                    </div>
+                    <div class="col-xs-10 col-sm-8 infos">
+                        <div>
+                            <h4>Von <b>{{offer.fromLocation}}</b> nach <b>{{offer.toLocation}}</b></h4></div>
+                        <div>Reisedatum: <b>{{offer.departureTime}}</b></div>
+                        <div>Verzögerung: {{offer.delay}} Minuten</div>
+                        <div style="font-size: 24px; text-align: right;">{{offer.numberOfPlaces}} <span class="glyphicon glyphicon-user" aria-hidden="true"></span></div>
+                        <div style="font-size: 18px; text-align: right;">{{offer.luggageSpace}} <span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span></div>
+                    </div>
+                    <div class="col-xs-2 col-sm-1">
+                        <button id="book{{offer.id}}" type="button" class="btn button"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+    </div>
 </body>
+
+
 </html>
+
+<!--<br>
+<br>
+Users:
+<br>
+{{fetchedUsers}}
+<br>
+<br>
+Request:
+<br>
+{{fetchedRequest}}
+<br>
+<br>
+Transport:
+<br>
+{{fetchedTransportPoint}}-->

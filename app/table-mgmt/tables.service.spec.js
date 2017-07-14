@@ -60,7 +60,7 @@ describe('Service: tables', function () {
         mockTableStatusChange = function (table) {
             $httpBackend.whenPOST(contextPath + 'services/rest/tablemanagement/v1/table/', table).respond(200);
         };
-    
+
     beforeEach(module('app.table-mgmt'));
 
     beforeEach(function () {
@@ -113,7 +113,7 @@ describe('Service: tables', function () {
         // then
         expect(loadedTable).toEqual(table);
     });
-    
+
     it('frees one table', function () {
         //given
         var table = {
@@ -162,5 +162,5 @@ describe('Service: tables', function () {
         $httpBackend.flush();
         // then
     });
-    
+
 });
